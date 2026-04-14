@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="827.0" style="-fx-border-color: brown;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="teoria.labuivjfxnomina.NominaController">
+   <children>
+      <Pane layoutX="20.0" layoutY="57.0" prefHeight="236.0" prefWidth="787.0" style="-fx-border-color: brown;">
+         <children>
+            <Label layoutX="212.0" layoutY="27.0" text="Matrícula" />
+            <Label layoutX="139.0" layoutY="59.0" prefHeight="18.0" prefWidth="126.0" text="Nombre del Empleado:" />
+            <Label layoutX="211.0" layoutY="100.0" text="Apellidos:" />
+            <Label layoutX="226.0" layoutY="136.0" text="Puesto:" />
+            <Label layoutX="171.0" layoutY="169.0" text="Horas Trabajadas:" />
+            <TextField fx:id="txtMatricula" layoutX="274.0" layoutY="23.0" />
+            <TextField fx:id="txtNombre" layoutX="274.0" layoutY="55.0" prefHeight="26.0" prefWidth="215.0" />
+            <TextField fx:id="txtApellidos" layoutX="274.0" layoutY="95.0" prefHeight="26.0" prefWidth="215.0" />
+            <ComboBox fx:id="cboPuesto" layoutX="274.0" layoutY="131.0" prefHeight="26.0" prefWidth="215.0" />
+            <TextField fx:id="txtHorasTrabajadas" layoutX="274.0" layoutY="165.0" />
+            <Button fx:id="btnNuevo" layoutX="274.0" layoutY="196.0" mnemonicParsing="false" onAction="#limpiarFormulario" prefHeight="26.0" prefWidth="94.0" text="Nuevo" />
+            <Button fx:id="btnGuardar" layoutX="404.0" layoutY="196.0" mnemonicParsing="false" onAction="#onAgregarEmpleadoButtonClick" prefHeight="26.0" prefWidth="102.0" text="Guardar" />
+         </children>
+      </Pane>
+      <Pane layoutX="20.0" layoutY="317.0" prefHeight="83.0" prefWidth="787.0" style="-fx-border-color: brown;">
+         <children>
+            <Label layoutX="29.0" layoutY="33.0" prefHeight="18.0" prefWidth="245.0" text="Escribe el Nombre o Matrícula del Empleado:" />
+            <TextField fx:id="txtBuscar" layoutX="274.0" layoutY="29.0" prefHeight="26.0" prefWidth="215.0" />
+            <Button fx:id="btnBuscar" layoutX="519.0" layoutY="29.0" mnemonicParsing="false" onAction="#onBuscarEmpleadoButtonClick" prefHeight="26.0" prefWidth="94.0" text="Aceptar" />
+         </children>
+      </Pane>
+      <Pane layoutX="20.0" layoutY="417.0" prefHeight="221.0" prefWidth="787.0" style="-fx-border-color: brown;">
+         <children>
+            <TableView fx:id="tblListaDeEmpleados" layoutX="7.0" layoutY="7.0" prefHeight="169.0" prefWidth="773.0">
+              <columns>
+                <TableColumn fx:id="colMatricula" prefWidth="97.0" text="Matrícula" />
+                  <TableColumn fx:id="colNombre" prefWidth="103.0" text="Nombre" />
+                <TableColumn fx:id="colApellidos" minWidth="0.0" prefWidth="113.0" text="Apellidos" />
+                  <TableColumn fx:id="colPuesto" prefWidth="103.0" text="Puesto" />
+                  <TableColumn fx:id="colHorasTrabajadas" prefWidth="124.0" text="Horas Trabajadas" />
+                  <TableColumn fx:id="colPagoXHora" prefWidth="111.0" text="Pago X Hora" />
+                  <TableColumn fx:id="colSalarioNeto" prefWidth="146.0" text="Salario Neto" />
+              </columns>
+            </TableView>
+            <Button fx:id="btnEliminar" layoutX="698.0" layoutY="182.0" mnemonicParsing="false" onAction="#onEliminarEmpleadoButtonClick" prefHeight="25.0" prefWidth="75.0" text="Eliminar" />
+            <Button fx:id="btnMostrarTodos" layoutX="14.0" layoutY="182.0" mnemonicParsing="false" onAction="#onMostrarTodosButtonClick" prefHeight="25.0" prefWidth="94.0" text="MostrarTodos" />
+         </children>
+      </Pane>
+      <Button fx:id="btnSalir" layoutX="704.0" layoutY="649.0" mnemonicParsing="false" onAction="#onSalirButtonClick" prefHeight="25.0" prefWidth="94.0" text="Salir" />
+      <Label layoutX="242.0" layoutY="14.0" text="Nomina de la empresa &quot;XYZ&quot;">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
