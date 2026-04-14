@@ -50,6 +50,7 @@
             </TableView>
             <Button fx:id="btnEliminar" layoutX="698.0" layoutY="182.0" mnemonicParsing="false" onAction="#onEliminarEmpleadoButtonClick" prefHeight="25.0" prefWidth="75.0" text="Eliminar" />
             <Button fx:id="btnMostrarTodos" layoutX="14.0" layoutY="182.0" mnemonicParsing="false" onAction="#onMostrarTodosButtonClick" prefHeight="25.0" prefWidth="94.0" text="MostrarTodos" />
+            <Button fx:id="btnEditar" layoutX="602.0" layoutY="182.0" mnemonicParsing="false" onAction="#onEditarButtonClick" prefHeight="25.0" prefWidth="75.0" text="Editar" />
          </children>
       </Pane>
       <Button fx:id="btnSalir" layoutX="704.0" layoutY="649.0" mnemonicParsing="false" onAction="#onSalirButtonClick" prefHeight="25.0" prefWidth="94.0" text="Salir" />
