@@ -190,6 +190,10 @@ public class NominaController implements Initializable {
             informacion.setContentText("El empleado fue eliminado correctamente.");
             informacion.showAndWait();
         }
+        
+        //llamamos al método de mostrar todos para que se refleje que se a eliminado 
+        onMostrarTodosButtonClick();
+        
     } // fin del método eliminar
     
     /**
